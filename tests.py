@@ -1,21 +1,21 @@
-from hw2_debugging import *
+"""
+This is our main testing program to test if merge sort is working correctly
+"""
 
-# Tests the mergeSort function on an empty array
-def test_empty_array(): 
-  arr = []
-  assert merge_sort(arr) == arr
+from hw2_debugging import merge_sort
 
-# Tests the mergeSort function on an array with 1 value (odd number of values)
+def test_empty_array():
+    """Tests the mergeSort function on an empty array"""
+    arr = []
+    assert merge_sort(arr) == arr
+
 def test_array_1():
-  arr = [1]
-  assert merge_sort(arr) == arr
+    """Tests the mergeSort function on an array with 1 value (odd number of values)"""
+    arr = [1]
+    assert merge_sort(arr) == arr
 
-# Tests the mergeSort function on an array with 4 values (even number of values)
 def test_array_even():
-  arr = [3, 1, 2, 4] 
-  arr2 = [1,2,3,4]
-  assert merge_sort(arr) == arr2
-  
-  
-  
-    
+    """Tests the mergeSort function on an array with 4 values (even number of values)"""
+    arr = [3, 1, 2, 4] 
+    arr2 = [1,2,3,4]
+    assert merge_sort(arr) == arr2
