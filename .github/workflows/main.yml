@@ -1,0 +1,5 @@
+repos:
+-   repo: https://github.com/pre-commit/mirrors-pyflakes
+    rev: v2.5.0  # Use the latest version
+    hooks:
+    -   id: pyflakes
