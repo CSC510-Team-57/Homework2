@@ -1,5 +1,13 @@
-repos:
--   repo: https://github.com/pre-commit/mirrors-pyflakes
-    rev: v2.5.0  # Use the latest version
-    hooks:
-    -   id: pyflakes
+on: [push]
+jobs:
+
+runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
+
+    repos:
+    -   repo: https://github.com/pre-commit/mirrors-pyflakes
+        rev: v2.5.0  # Use the latest version
+        hooks:
+        -   id: pyflakes
