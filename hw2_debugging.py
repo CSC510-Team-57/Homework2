@@ -1,15 +1,14 @@
 """
-This file contains the mergesort function which sorts an array by splitting the array and then
-sorting the halves while merging
+hw2_debugging.py
+checking error correction for pylint
 """
 
 import rand
 
+
 def merge_sort(arr):
     """
-    Main Merge Sort function which takes in an array to be sorted, and then splits it to be sorted,
-    by recusively calling itself until the amount of indexes in the array is only one. It then
-    merges them, while sorting until it sorts the entire array which it then outputs.
+    Functgion for mergesort
     """
     if len(arr) == 1:
         return arr
@@ -17,10 +16,10 @@ def merge_sort(arr):
     half = len(arr) // 2
     return recombine(merge_sort(arr[:half]), merge_sort(arr[half:]))
 
+
 def recombine(left_arr, right_arr):
     """
-    Helper function for Merge Sort which takes in two arrays and recombines them, but it does sort
-    them while recombining.
+    Combining sorted arrays
     """
     left_index = 0
     right_index = 0
@@ -36,9 +35,9 @@ def recombine(left_arr, right_arr):
     merge_arr[left_index + right_index:] = left_arr[left_index:] + right_arr[right_index:]
     return merge_arr
 
-# Creates a random array and then sorts it with mergesort
-tempArr = rand.random_array([None] * 20)
-arr_out = merge_sort(tempArr)
 
-# Prints the sorted array
+arr = rand.random_array([None] * 20)
+arr_out = merge_sort(arr)
+
 print(arr_out)
+
