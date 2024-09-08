@@ -21,6 +21,8 @@ jobs:
       run: |
         find . -name '*.py' -exec pylint {} \;
 
-    - name: PyLint with dynamic badge          
-      uses: Silleellie/pylint-github-action@v2
+    - uses: Silleellie/pylint-github-action@v2
+      with:
+        lint-path: src
+        python-version: 3.8
       
