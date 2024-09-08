@@ -16,6 +16,6 @@ def test_array_1():
 
 def test_array_even():
     """Tests the mergeSort function on an array with 4 values (even number of values)"""
-    arr = [3, 1, 2, 4] 
+    arr = [3, 1, 2, 4]
     arr2 = [1,2,3,4]
     assert merge_sort(arr) == arr2
