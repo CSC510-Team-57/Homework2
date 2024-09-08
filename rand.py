@@ -1,7 +1,12 @@
+"""
+This component contains a randomizer helper function for the main hw2 file which randomly sorts
+a given array for testing
+"""
+
 import subprocess
 
-# Shuffles an array randomly using its built in process
 def random_array(arr):
+    """ Shuffles an array randomly using its built in process """
     shuffled_num = None
     for i in range(len(arr)):
         shuffled_num = subprocess.run(
