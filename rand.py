@@ -1,9 +1,9 @@
 """
-rand.py description
+This component contains a randomizer helper function for the main hw2 file which randomly sorts
+a given array for testing
 """
 
 import subprocess
-
 
 def random_array(arr):
     """ Shuffles an array randomly using its built in process """
@@ -13,4 +13,3 @@ def random_array(arr):
             ["shuf", "-i1-20", "-n1"], capture_output=True, check=False)
         value = int(shuffled_num.stdout)
     return arr
-
