@@ -22,6 +22,6 @@ jobs:
         find . -name '*.py' -exec pylint {} \;
     - uses: Silleellie/pylint-github-action@v2
       with:
-        lint-path: src  # lint src package
+        lint-path: .  # lint src package
         python-version: 3.11  # python version which will lint the package
       
