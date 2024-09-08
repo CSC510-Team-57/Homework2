@@ -11,7 +11,7 @@ def merge_sort(arr):
     by recusively calling itself until the amount of indexes in the array is only one. It then
     merges them, while sorting until it sorts the entire array which it then outputs.
     """
-    if len(arr) == 1:
+    if len(arr) <= 1:
         return arr
 
     half = len(arr) // 2
