@@ -6,13 +6,11 @@ import subprocess
 
 
 def random_array(arr):
-    """
-    Generates an array of random numbers.
-    """
-    for i, _ in enumerate(arr):
+    """ Shuffles an array randomly using its built in process """
+    shuffled_num = None
+    for i, value in enumerate(arr):
         shuffled_num = subprocess.run(
-            ["shuf", "-i1-20", "-n1"], capture_output=True, check=True
-        )
-        arr[i] = int(shuffled_num.stdout)
+            ["shuf", "-i1-20", "-n1"], capture_output=True, check=False)
+        value = int(shuffled_num.stdout)
     return arr
 
