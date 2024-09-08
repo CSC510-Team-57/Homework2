@@ -1,6 +1,6 @@
 import subprocess
 
-
+# Shuffles an array randomly using its built in process
 def random_array(arr):
     shuffled_num = None
     for i in range(len(arr)):
