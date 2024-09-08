@@ -20,4 +20,7 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         find . -name '*.py' -exec pylint {} \;
+
+    - name: PyLint with dynamic badge          
+      uses: Silleellie/pylint-github-action@v2
       
