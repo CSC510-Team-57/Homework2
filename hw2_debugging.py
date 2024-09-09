@@ -5,6 +5,7 @@ sorting the halves while merging
 
 import rand
 
+
 def merge_sort(arr):
     """
     Main Merge Sort function which takes in an array to be sorted, and then splits it to be sorted,
@@ -16,6 +17,7 @@ def merge_sort(arr):
 
     half = len(arr) // 2
     return recombine(merge_sort(arr[:half]), merge_sort(arr[half:]))
+
 
 def recombine(left_arr, right_arr):
     """
@@ -33,8 +35,10 @@ def recombine(left_arr, right_arr):
             merge_arr[left_index + right_index] = right_arr[right_index]
             right_index += 1
 
-    merge_arr[left_index + right_index:] = left_arr[left_index:] + right_arr[right_index:]
+    merge_arr[left_index + right_index:] = left_arr[left_index:] + \
+        right_arr[right_index:]
     return merge_arr
+
 
 # Creates a random array and then sorts it with mergesort
 tempArr = rand.random_array([None] * 20)

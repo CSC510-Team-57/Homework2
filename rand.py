@@ -5,6 +5,7 @@ a given array for testing
 
 import subprocess
 
+
 def random_array(arr):
     """ Shuffles an array randomly using its built in process """
     shuffled_num = None
