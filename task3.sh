@@ -1,5 +1,4 @@
 #!/bin/bash
-cd hw4
 
 gawk -F, '$3 == 2 && $13 ~ /S/' titanic.csv
 
